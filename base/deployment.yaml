@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minha-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minha-api
+  template:
+    metadata:
+      labels:
+        app: minha-api
+    spce:
+      containers:
+        - name: api
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
