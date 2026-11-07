@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: minha-api
-    spce:
+    spec:
       containers:
         - name: api
           image: nginx:1.27
